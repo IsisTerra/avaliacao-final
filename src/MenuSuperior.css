@@ -1,0 +1,14 @@
+.AppBar {
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+    background: linear-gradient(90deg, rgba(2, 3, 41, 1) 20%, rgba(21, 36, 117, 1) 64%, rgba(37, 10, 83, 1) 100%);
+}
+
+.btn {
+    width: 20vw;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
