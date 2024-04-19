@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PaginaInicial from './PaginaInicial';
-import './index.css';
 import Detalhes from './Detalhes';
 import SobreMim from './SobreMim';
 import PaginaErro from './PaginaErro';

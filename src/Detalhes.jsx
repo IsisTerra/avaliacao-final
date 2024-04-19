@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 import axios from "axios";
+import './PaginaInicial.css'
 
 function Detalhes() {
     const { id } = useParams()
@@ -25,7 +26,7 @@ function Detalhes() {
             <p>É potencialmente perigoso? {asteroide?.is_potentially_hazardous_asteroid ? "Sim" : "Não"}</p>
             <p>Diâmetro MÁXIMO estimado em quilômetros: {asteroide?.estimated_diameter?.kilometers?.estimated_diameter_max}</p>
 
-            <p>Velocidade relativa do objeto por hora: {asteroide?.close_approach_data?.relative_velocity?.kilometers_per_hour}</p>
+            <p>Velocidade relativa do objeto por hora: {asteroide?.close_approach_data[0]?.relative_velocity?.kilometers_per_hour}</p>
             <p>Magnitude absoluta: {asteroide?.absolute_magnitude_h}</p>
         </>
     )

@@ -1,4 +1,4 @@
-import './SobreMim.css'
+import './PaginaInicial.css'
 
 function SobreMim() {
     return (

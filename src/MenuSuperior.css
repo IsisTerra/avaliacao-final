@@ -1,12 +1,15 @@
-.AppBar {
-    display: flex;
-    justify-content: center;
-    height: 10vh;
-    background: linear-gradient(90deg, rgba(2, 3, 41, 1) 20%, rgba(21, 36, 117, 1) 64%, rgba(37, 10, 83, 1) 100%);
+body{
+    background-image: url(./assets/background.jpg);
 }
 
-.btn {
-    width: 20vw;
+.botoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.menu {
+    background: linear-gradient(90deg, rgba(2, 3, 41, 1) 20%, rgba(21, 36, 117, 1) 64%, rgba(37, 10, 83, 1) 100%);
 }
 
 .btn:hover {
