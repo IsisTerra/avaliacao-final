@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { Container } from '@mui/material';
-import './PaginaInicial.css'
+import { Box, Container } from '@mui/material';
+import { Title, Paragrafo } from './Style';
+import { Block } from '@mui/icons-material';
 
 function PaginaInicial() {
   const dataAtual = new Date().toISOString().split('T')[0]
@@ -24,13 +25,19 @@ function PaginaInicial() {
 
   return (
     <>
-      <Container style={{width:'80%', textAlign:'Center'}}>
+      <Container style={{ width: '100%', textAlign: 'Center' }}>
         {dadosAsteroides.map((asteroide) => (
-          <Link to={`/asteroides/${asteroide.id}`}>
-            <h1>Nome do objeto: {asteroide.name}</h1>
-            <p>É potencialmente perigoso? {asteroide.is_potentially_hazardous_asteroid ? "Sim" : "Não"}</p>
-            <p>Diâmetro MÁXIMO estimado em quilômetros: {asteroide.estimated_diameter.kilometers.estimated_diameter_max}</p>
-          </Link>
+          <Box
+            my={4}
+            p={1}
+            sx={{ border: '2px solid grey' }}
+          >
+            <Link to={`/asteroides/${asteroide.id}`}>
+              <Title>Nome do objeto: {asteroide.name}</Title>
+              <Paragrafo>É potencialmente perigoso? {asteroide.is_potentially_hazardous_asteroid ? "Sim" : "Não"}</Paragrafo>
+              <Paragrafo>Diâmetro MÁXIMO estimado em quilômetros: {asteroide.estimated_diameter.kilometers.estimated_diameter_max}</Paragrafo>
+            </Link>
+          </Box>
         ))}
       </Container>
     </>
